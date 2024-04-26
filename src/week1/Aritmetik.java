@@ -4,23 +4,29 @@ import java.util.Scanner;
 public class Aritmetik {
     public static void main(String[] args) {
 
-        //a+b*c-b
+        double armutFiyat = 2.14;
+        double elmaFiyat = 3.67;
+        double domatesFiyat = 1.11;
+        double muzFiyat = 0.95;
+        double patlicanFiyat = 5.00;
 
-        int a,b,c,sonuc;
-        Scanner sc=new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Armut Kaç Kilo? : ");
+        double armutKilo = scanner.nextDouble();
 
-        System.out.print("1.Sayıyı Giriniz : ");
-        a= sc.nextInt();
+        System.out.print("Elma Kaç Kilo? : ");
+        double elmaKilo = scanner.nextDouble();
 
-        System.out.print("2.Sayıyı Giriniz : ");
-        b= sc.nextInt();
+        System.out.print("Domates Kaç Kilo? : ");
+        double domatesKilo = scanner.nextDouble();
 
-        System.out.print("3.Sayıyı Giriniz : ");
-        c= sc.nextInt();
+        System.out.print("Muz Kaç Kilo? : ");
+        double muzKilo = scanner.nextDouble();
 
-        sonuc=(a+b)*c-b;
-
-        System.out.print("İşleminizin Sonucu : "+sonuc);
-
+        System.out.print("Patlıcan Kaç Kilo? : ");
+        double patlicanKilo = scanner.nextDouble();
+        double toplamTutar = (armutFiyat * armutKilo) + (elmaFiyat * elmaKilo) +
+                (domatesFiyat * domatesKilo) + (muzFiyat * muzKilo) + (patlicanFiyat * patlicanKilo);
+        System.out.println("Toplam Tutar : " + toplamTutar + " TL ");
     }
 }
