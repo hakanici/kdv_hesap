@@ -36,7 +36,7 @@ Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %2
         int tip = sc.nextInt();
 
         double price = 0.10 * km;
-        double disCount;
+        double discount;
 
 
         if (yas > 0 && km > 0) {
@@ -44,14 +44,15 @@ Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %2
                 case 1:
                     if (yas < 12) {
                         price = price - (price * 0.5);
-                        disCount = price * 0.5;
+                        discount = price * 0.5;
                     } else if (yas >= 12 && yas <= 24) {
                         price = price - (price * 0.10);
-                        disCount = price * 0.1;
+                        discount = price * 0.1;
                     } else if (yas > 65) {
                         price = price - (price * 0.30);
-                        disCount = price * 0.3;
+                        discount = price * 0.3;
                     }
+                    System.out.println("Ödenecek Tutar : " +price+ " TL");
                     break;
                 case 2:
                     if (yas < 12) {
@@ -69,13 +70,15 @@ Kişi "Yolculuk Tipini" gidiş dönüş seçmiş ise bilet fiyatı üzerinden %2
 
                         price=price*1.6;
                     }
+                    System.out.println("Ödenecek Tutar : " +price+ " TL");
                     break;
+
                 default:
                     System.out.println("Geçersiz Girdi");
 
 
             }
-            System.out.println(price);
+
         }
         else {
             System.out.println("Geçersiz yaş veya Mesafe Girdiniz!");
